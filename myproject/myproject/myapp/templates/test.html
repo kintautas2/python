@@ -1,0 +1,9 @@
+
+        <h1>Tags:</h1>
+        {% if choices %}
+            <ul>
+                {% for choice in choices %}
+                    <li><a href="{{ choice.tag }}">{{ choice.tag }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
