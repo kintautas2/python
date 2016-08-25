@@ -7,5 +7,5 @@ from myproject.myapp.views import viewTag
 
 urlpatterns = [
     url(r'^list/$', list, name='list'),
-    url(r'^list/(?P<requestedTag>[\w\-]+)/$', viewTag, name='view')
+    url(r'^list/(?P<username>[\w\-]+)/(?P<requestedTag>[\w\-]+)/$', viewTag, name='view')
 ]

@@ -112,7 +112,7 @@ def list(request):
 
 
 @login_required(login_url='/')
-def viewTag(request, requestedTag):
-    documents = Document.objects.filter(gallery=Gallery.objects.filter(username=request.user,tag=requestedTag)).all()
-    return render(request,'images.html',{'documents':documents,'Tag':requestedTag,'user':request.user})
+def viewTag(request, requestedTag,username):
+    documents = Document.objects.filter(gallery=Gallery.objects.filter(username=username,tag=requestedTag)).all()
+    return render(request,'images.html',{'documents':documents,'Tag':requestedTag,'user':username})
 
